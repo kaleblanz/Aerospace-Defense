@@ -1,4 +1,4 @@
-package com.aerospace-defense;
+package com.aerospacedefense;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
