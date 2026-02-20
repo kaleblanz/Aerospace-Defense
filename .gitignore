@@ -1,0 +1,11 @@
+#ignore java compiled files
+target/
+*.class
+
+# igore mac system files
+.DS_Store
+
+# ignore vscode settings
+.idea/
+.vscode/
+*.iml
