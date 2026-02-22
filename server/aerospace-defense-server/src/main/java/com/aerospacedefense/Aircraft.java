@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 //implments Serializable to actually put our serialVersionUID into use for serialzation/de-serializatoin
 public class Aircraft implements Serializable{
-    private int aircraft_id;
+    private String aircraft_id;
     private String radio_callsign;
     private double longitude;
     private double latitude;
@@ -14,7 +14,7 @@ public class Aircraft implements Serializable{
     private static final long serialVersionUID = 1L;
     
     //Constructor for our Aircraft Object
-    public Aircraft(int aircraft_id , String radio_callsign, double longitude, double latitude, double altitude, double velocity){
+    public Aircraft(String aircraft_id , String radio_callsign, double longitude, double latitude, double altitude, double velocity){
         this.aircraft_id = aircraft_id;
         this.radio_callsign = radio_callsign;
         this.longitude = longitude;
@@ -28,12 +28,6 @@ public class Aircraft implements Serializable{
 
     }
 
-    public static void main (String[] args){
-        Aircraft plane1 = new Aircraft(5,"ds",1.11,1.019,4.34,91.1);
-        System.out.println(plane1);
-
-    }
-
     //Overide toString to be able to print AirCraft objects
     @Override
     public String toString() {
@@ -41,7 +35,7 @@ public class Aircraft implements Serializable{
     }
 
     //Declare our Getters for Aircraft object fields
-    public int getAirCraft_ID(){
+    public String getAirCraft_ID(){
         return this.aircraft_id;
     }
 
@@ -66,7 +60,7 @@ public class Aircraft implements Serializable{
     }
 
     //declare our Setters for our Aircraft object fields
-    public void setAirCraft_ID(int aircraft_id){
+    public void setAirCraft_ID(String aircraft_id){
          this.aircraft_id = aircraft_id;
     }
 

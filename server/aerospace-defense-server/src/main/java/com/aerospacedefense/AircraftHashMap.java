@@ -10,18 +10,18 @@ import org.springframework.stereotype.Service;
 @Service
 public class AircraftHashMap{
     // Map that stores all information on Aircraft objects
-    private HashMap<Integer,Aircraft> aircraft_map = new HashMap<>();
+    private HashMap<String,Aircraft> aircraft_map = new HashMap<>();
 
 
     public void addAircraft(Aircraft aircraft){
         aircraft_map.put(aircraft.getAirCraft_ID(), aircraft);
     }
 
-    public Aircraft findAircraft(int aircraft_id){
+    public Aircraft findAircraft(String aircraft_id){
         return aircraft_map.get(aircraft_id);
     }
 
-    public void removeAircraft(int aircraft_id){
+    public void removeAircraft(String aircraft_id){
         aircraft_map.remove(aircraft_id);
     }
 }
