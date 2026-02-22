@@ -29,7 +29,7 @@ public class AircraftAPI{
     // GET Request to recieve a specific Aircraft based on id
     // PathVariable is to extract values from URI of incoming HTTP Request
     @GetMapping("/get-aircraft/{id}")
-    public Aircraft endpointGetAircraft(@PathVariable int id){
+    public Aircraft endpointGetAircraft(@PathVariable String id){
         //Spring Boot automatically serializes java into JSON
         return aircraftHashMap.findAircraft(id);
     }
@@ -37,7 +37,7 @@ public class AircraftAPI{
     // DeleteMapping is a route to delete
     // DELETE Request to remove a specific Aircraft based on id
     @DeleteMapping("/delete-aircraft/{id}")
-    public void endpointRemoveAircraft(@PathVariable int id){
+    public void endpointRemoveAircraft(@PathVariable String id){
         aircraftHashMap.removeAircraft(id);
     }
 }
