@@ -14,7 +14,7 @@ public class AircraftHashMap{
 
 
     public void addAircraft(Aircraft aircraft){
-        aircraft_map.put(aircraft.getAirCraft_ID(), aircraft);
+        aircraft_map.put(aircraft.getAircraft_id(), aircraft);
     }
 
     public Aircraft findAircraft(String aircraft_id){
@@ -23,5 +23,9 @@ public class AircraftHashMap{
 
     public void removeAircraft(String aircraft_id){
         aircraft_map.remove(aircraft_id);
+    }
+
+    public void removeAllAircrafts(){
+        aircraft_map.clear();
     }
 }

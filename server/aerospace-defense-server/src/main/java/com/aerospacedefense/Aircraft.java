@@ -10,6 +10,7 @@ public class Aircraft implements Serializable{
     private double latitude;
     private double altitude;
     private double velocity;
+    private boolean isRestricted;
     //our version stamp for which version of Aircraft object is this
     private static final long serialVersionUID = 1L;
     
@@ -31,15 +32,15 @@ public class Aircraft implements Serializable{
     //Overide toString to be able to print AirCraft objects
     @Override
     public String toString() {
-        return "Plain ID: " + String.valueOf(this.aircraft_id) + ", with Radio CallSign: " + this.radio_callsign;
+        return "Plane ID: " + this.aircraft_id + ",  with Radio CallSign: " + this.radio_callsign;
     }
 
     //Declare our Getters for Aircraft object fields
-    public String getAirCraft_ID(){
+    public String getAircraft_id(){
         return this.aircraft_id;
     }
 
-    public String getRadio_callSign(){
+    public String getRadio_callsign(){
         return this.radio_callsign;
     }
 
@@ -59,12 +60,16 @@ public class Aircraft implements Serializable{
         return this.velocity;
     }
 
+    public boolean getIsRestricted(){
+        return this.isRestricted;
+    }
+
     //declare our Setters for our Aircraft object fields
-    public void setAirCraft_ID(String aircraft_id){
+    public void setAircraft_id(String aircraft_id){
          this.aircraft_id = aircraft_id;
     }
 
-    public void setRadio_callSign(String radio_callsign){
+    public void setRadio_callsign(String radio_callsign){
         this.radio_callsign = radio_callsign;
     }
 
@@ -78,13 +83,17 @@ public class Aircraft implements Serializable{
 
     public void setAltitude(double altitude){
         //Invalid for an altitude to be under 0
-        if (altitude >= 0){
+        if (altitude >= -1){
             this.altitude = altitude;
         }
     }
 
     public void setVelocity(double velocity){
         this.velocity = velocity;
+    }
+
+    public void setIsRestricted(boolean isRestricted){
+        this.isRestricted = isRestricted;
     }
     
 

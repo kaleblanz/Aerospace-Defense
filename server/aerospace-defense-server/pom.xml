@@ -5,14 +5,31 @@
   <artifactId>aerospace-defense-server</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
+
+  <!-- inherit all standard SpringBoot configs-->
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.2.2</version>
+    <relativePath/> 
+  </parent>
+
   <name>aerospace-defense-server</name>
   <url>http://maven.apache.org</url>
   <properties>
+  <!-- this is for declaring we are using Java 17-->
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
   </properties>
+
   <dependencies>
+  <!-- adding ability to listen for web requests and manage data through @Service-->
+  <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
