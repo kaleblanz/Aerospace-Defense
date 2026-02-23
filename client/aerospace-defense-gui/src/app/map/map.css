@@ -1,0 +1,12 @@
+/* div with id=map*/
+#map {
+    /* 100% of screen height */
+    height: 100vh;
+
+    /* Fill the entire width of the browser window*/
+    width: 100%;
+
+    /* verifys no werid gaps around the map*/
+    margin: 0;
+    padding: 0;
+}

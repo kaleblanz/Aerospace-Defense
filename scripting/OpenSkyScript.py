@@ -45,15 +45,15 @@ def callAPI():
         all_plane_info.append(aircraft)
 
     
-    requests.post("http://localhost:8080/add-aircrafts", json=all_plane_info)
+    requests.post("http://localhost:8080/api/add-aircrafts", json=all_plane_info)
     
 
 
 def main():
-    #infinite look that sleeps for 10 seconds that recalls OpenSky API
+    #infinite look that sleeps for 6 seconds that recalls OpenSky API
     while True:
         callAPI()
-        time.sleep(10) 
+        time.sleep(6) 
 
 
 main()

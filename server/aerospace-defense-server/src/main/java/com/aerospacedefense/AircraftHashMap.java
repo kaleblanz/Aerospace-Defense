@@ -28,4 +28,8 @@ public class AircraftHashMap{
     public void removeAllAircrafts(){
         aircraft_map.clear();
     }
+
+    public HashMap<String,Aircraft> returnMap(){
+        return aircraft_map;
+    }
 }
