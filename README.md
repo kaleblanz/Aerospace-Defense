@@ -14,7 +14,7 @@ This application monitors live Aircraft data by creating a script that re-reads 
 Runs a script that reads from the OpenSky API every 6 seconds with Aircrafts that are in New York State and surrond New York State. This sends a POST Request to our SpringBoot backend every time the script receives new data from the OpenSky API.
 
 **Backend:**
-Uses a SpringBoot API that stores the data given from the Python script in Aircraft objects, performs logic to see if Aircrafts are in a Restriced Zone and also serializes the data being sent to the front end.
+Created a SpringBoot API that stores the data given from the Python script in Aircraft objects, performs logic to see if Aircrafts are in a Restriced Zone and also serializes the data being sent to the front end.
 
 **Frontend:**
 Using Angular and Leaflet, I create an interactive map that fetches the Aircraft data from our SpringBoot backend every 4 seconds and plots the new data on the map without refreshing. Creates a Red Box over the restricted cites and will turn the Aircraft node to be red instead of blue if Aircraft is in a restricted zone.
